@@ -1,0 +1,40 @@
+<h1>Welcome to Registration</h1>
+<div class="container-fluid">
+    <div class="row">
+        <!-- <div class="col-6"> -->
+            <!-- image -->
+            <!-- <img src="https://i.pinimg.com/originals/de/80/ca/de80ca4922b016784c86f80ee5c8966f.gif" alt="">
+        </div> -->
+        <div *ngIf="RegisterSuccess" class="container text-center mt-5">
+          <h1>Your data getting Registered...Please wait...</h1>
+          <div class="spinner-border text-warning " role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+        <div *ngIf="!RegisterSuccess" class="register">
+            <!-- form -->
+            <form (ngSubmit)="register()" [formGroup]="registerForm"> 
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Name</label>
+                    <input name="username" formControlName="username" type="email" class="form-control" aria-describedby="emailHelp">
+                    <div *ngIf="this.registerForm.get('username')?.errors&&this.registerForm.get('username')?.touched" class="text-danger">*Invalid User Name</div>
+                  </div>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Account Number</label>
+                  <input name="acno" formControlName="acno"  type="email" class="form-control" aria-describedby="emailHelp">
+                  <div *ngIf="this.registerForm.get('acno')?.errors&&this.registerForm.get('acno')?.touched" class="text-danger">*Invalid Account Number</div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Password</label>
+                  <input name="password" formControlName="password" type="password" class="form-control">
+                  <div *ngIf="this.registerForm.get('password')?.errors&&this.registerForm.get('password')?.touched" class="text-danger">*Invalid Password</div>
+                </div>
+                <button type="submit" class="btn">Submit</button>
+                <h3 class="text-danger">{{RegisterError}}</h3>
+                <div class="reg">
+                    <span>Are You Existing Customer?</span><span class="re"><a routerLink="/">Login Here</a></span>
+                </div>
+              </form>
+        </div>
+    </div>
+</div>

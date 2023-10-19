@@ -1,0 +1,24 @@
+img{
+    height: 322px;
+    width: 500px;
+    margin-left: 515px;
+    margin-top: 70px;
+
+}
+h1{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 60px;
+    font-family: 'Tektur', cursive;
+    color: #00ADEF;
+}
+h2{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 60px;
+    color: #00ADEF;
+}
+.pnt{
+    background-color: #ffe86d;
+    height: 707px;
+}

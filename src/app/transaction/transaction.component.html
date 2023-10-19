@@ -1,0 +1,108 @@
+<!-- Navbar Section -->
+<nav class="navbar" style="background-color: #00ADEF">
+    <div class="container-fluid">
+      <a class="navbar-brand">Transaction History</a>
+      <form class="d-flex" role="search">
+      </form>
+    </div>
+  </nav>
+<div class="container d-flex mt-4 mb-3">
+    <div class="col-4"></div>
+    <div class="col-4">
+    <input [(ngModel)] = "searchTerm" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+    </div>
+    <div class="col-4 text-center">
+      <button (click)="generatePdf()"   class="btn btn-info col-6 btn1" type="submit">Export as pdf</button>
+    </div>
+
+  </div>
+  <div class="row-table">
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Type</th>
+            <th scope="col">From Account</th>
+            <th scope="col">To Account</th>
+            <th scope="col">Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="table-active" *ngFor="let trans of transactions |search:searchTerm:'type'; let i=index">
+            <th scope="row">{{i+1}}</th>
+            <td>{{trans.type}}</td>
+            <td>{{trans.fromAcno}}</td>
+            <td>{{trans.toAcno}}</td>
+            <td>{{trans.amount}}</td>
+          </tr>
+        </tbody>
+      </table>
+        
+   
+  </div>
+
+
+    <!-- Footer -->
+    <footer class="text-center text-white" style="background-color: #00ADEF; height:80px">
+        <!-- Grid container -->
+        <div class="container pt-4">
+          <!-- Section: Social media -->
+          <section class="mb-4">
+            <!-- Facebook -->
+            <a
+              class="btn btn-link btn-floating btn-lg text-dark m-1"
+              href="#!"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+      
+            <!-- Twitter -->
+            <a
+              class="btn btn-link btn-floating btn-lg text-dark m-1"
+              href="#!"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="fab fa-twitter"></i
+            ></a>
+      
+            <!-- Google -->
+            <a
+              class="btn btn-link btn-floating btn-lg text-dark m-1"
+              href="#!"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="fab fa-google"></i
+            ></a>
+      
+            <!-- Instagram -->
+            <a
+              class="btn btn-link btn-floating btn-lg text-dark m-1"
+              href="#!"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="fab fa-instagram"></i
+            ></a>
+      
+            <!-- Linkedin -->
+            <a
+              class="btn btn-link btn-floating btn-lg text-dark m-1"
+              href="#!"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <!-- Github -->
+            <a
+              class="btn btn-link btn-floating btn-lg text-dark m-1"
+              href="#!"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="fab fa-github"></i
+            ></a>
+          </section>
+          <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+      </footer>

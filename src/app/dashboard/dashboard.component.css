@@ -1,0 +1,45 @@
+a{
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    cursor: pointer;
+}
+.dropdown-item{
+    font-size: 15px;
+}
+button{
+    border-radius: 10px;
+    height: 44px;
+    width: 144px;
+    background-color: #00ADEF;
+    color: #ffe86d;
+    font-weight: 600;
+    border: 1px;
+    margin-top: 10px;
+}
+.container-fluid {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  .top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    margin-top: 100px;
+    font-size: 20px;
+    margin-left: 20px;
+    text-align: justify;
+  }
+  
+  img{
+    height: 615px;
+    margin-left: -12px;
+  }
+  .head{
+    background-color: #00ADEF;
+    color: #ffe86d;
+    text-align: center;
+    font-family: 'Tektur', cursive;
+    height: 67px;
+    padding-top: 7px;
+}
